@@ -1,0 +1,62 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include _head.html %}
+</head>
+
+<body class="home">
+
+{% include _browser-upgrade.html %}
+
+{% include _navigation.html %}
+
+{% if page.image.feature %}
+  <div class="image-wrap">
+  <!-- <img src="{{site.url}}/images/sample-image-2.jpg" alt="{{ page.title }} feature image">
+  {% if page.image.credit %}
+    <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+  {% endif %}-->
+  </div><!-- /.image-wrap -->
+{% endif %}
+<br/>
+
+<div id="main" role="main"> 
+  <div class="article-author-side">
+    {% include _author-bio.html %}
+  </div>
+  <div id="index">
+	{% comment %}
+  	<h3><a href="{{ site.url}}/posts/">Recent Posts</a></h3>
+      {% for post in site.posts limit:5 %}    
+      <article>
+        {% if post.link %}
+          <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
+        {% else %}
+          <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+          <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        {% endif %}
+      </article>
+      {% endfor %}
+	{% endcomment %}
+    <h3 id="my_title">About me</h3>
+    <p> 
+      I'm Chenglong Wang, a senior undergraduate in the school of EECS, Peking University. 
+      I'm also working as a research assistant in Software Engineering Institute with <a class="my_ref" href="http://sei.pku.edu.cn/~xiongyf04/">Prof. Yingfei Xiong</a> and <a class="my_ref" href="http://research.nii.ac.jp/~hu/">Prof. Zhenjiang Hu</a> in programming language.
+    </p>
+    <h3></h3>
+  </div><!-- /#index -->
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    {% include _footer.html %}
+  </footer>
+</div><!-- /.footer-wrap -->
+
+{% include _scripts.html %}
+  
+</body>
+</html>
