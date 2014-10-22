@@ -1,0 +1,137 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include _head.html %}
+</head>
+
+<body class="home">
+
+{% include _browser-upgrade.html %}
+
+{% include _navigation.html %}
+<br/>
+
+<div id="main" role="main"> 
+  <div class="article-author-side">
+    {% include _author-bio.html %}
+  </div>
+  <div id="index">
+    <div id="research">
+      <h3>Research</h3>
+      <p>
+        My main interests is in programming language, especially type theory, domain-specific language and program manipulation. Besides, I'm also quite interested in software engineering and visualization.
+      </p>
+        <ul id="projectslist">
+          <li>
+            <div class="projects">
+              <div class="ptitle">
+                Safely context-sensitive transformation language for Java API adaptation
+              </div>
+              <div class="authorlist">with J.Li, Y.Xiong, Z.Hu.</div>
+              <div class="conferenceinfo">(In progress)</div>
+              <div class="description">
+                <div class="text-side">
+                  We are trying to enhance our SWIN language to support context sensitive transformation for API adaptation while remain safety: types and dependencies will not get into trouble.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="projects">
+              <div class="ptitle">
+                SWIN: Type-safe transforamtion language for Java API adaptation
+              </div>
+              <div class="authorlist">J.Li, <me>C.Wang</me>, Y.Xiong, Z.Hu.</div>
+              <div class="conferenceinfo">
+                <div>To appear, ACM SIGPLAN 2015 Workshop on Partial Evaluation and Program Manipulation (PEPM'15)</div>
+                <div>Mumbai, India, Jan 12-13,2015</div>
+              </div>
+              <div class="description">
+                <table border="0">
+                  <tr>
+                    <td>
+                      <div class="picture-side">
+                        <img src="{{site.url}}/images/swin.jpg">
+                      </div>
+                    </td>
+                    <td width="40px"></td>
+                    <td>
+                      <div class="text-side">
+                        We design a domain specific language SWIN to help software developer adapt their code when API upgrade is needed. SWIN can miantain the well-typedness of the program transformation process: the transformed program will remain well-typed when the SWIN program is well formed.
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </li>
+          
+          <li>
+            <div class="projects">
+              <div class="ptitle">Composable and hygienic syntax typed macros</div>
+              <div class="authorlist">C.Omar, <me>C.Wang</me>, J.Aldrich.</div>
+              <div class="conferenceinfo">(Submitted)</div>
+               <div class="description">
+                <table border="0">
+                  <tr>
+                    <td>
+                      <div class="picture-side">
+                        <img src="{{site.url}}/images/tsm.jpg">
+                      </div>
+                    </td>
+                    <td width="40px"></td>
+                    <td>
+                      <div class="text-side">
+                        We proposed an innovative way to support language extension through typed syntax macros (TSMs) based on TSL mechenism. 
+                        TSMs provide a safe way to extend the host language by allowing users to add parsing rules in the definition of macros.
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="projects">
+              <div class="ptitle">
+                IEEE VAST Challenge 2014, mini challenge 1
+              </div>
+              <div class="authorlist"><me>C.Wang</me>, S.Chen, Z.Miao, X.Yuan.</div>
+              <div class="conferenceinfo">IEEE VAST Challenge 2014 - Award for Excellent Detailed Analysis, Paris, France</div>
+              <div class="description">
+                <table border="0">
+                  <tr>
+                    <td>
+                      <div class="picture-side">
+                        <img src="{{site.url}}/images/story.jpg">
+                      </div>
+                    </td>
+                    <td width="40px"></td>
+                    <td>
+                      <div class="text-side">
+                        Provide Story Explorer system to solve the challenge of news, email and entity relationship analysis from IEEE VAST Challenge 2014, Mini Challenge 1.
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div><!-- /#index -->
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    {% include _footer.html %}
+  </footer>
+</div><!-- /.footer-wrap -->
+
+{% include _scripts.html %}
+  
+</body>
+</html>

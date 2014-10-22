@@ -1,5 +1,5 @@
 // TYPOGRAPHY ================================================
-$doc-font-size: 16;
+$doc-font-size: 12;
 $doc-line-height: 26;
 $paragraph-indent: true !default;
 $base-font: 'PT Serif', serif;
@@ -8,10 +8,11 @@ $code-font: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono
 $alt-font: $base-font;
 
 // COLOR ======================================================
-$bodycolor      : #fff;
+$bodycolor      : #f7f7f7;
 $body-color     : $bodycolor;
 $textcolor      : #333332;
 $text-color     : $textcolor;
+$light-text-color: #434342;
 $border-color   : $text-color;
 $basecolor 		  : #343434;	  
 $compcolor 		  : spin($basecolor, 180); 

@@ -247,6 +247,9 @@ $button-size: 1.5rem;
 		@include font-rem(28);
 		border-bottom: 1px solid lighten($black,70);
 	}
+	p {
+		@include font-rem(16);
+	}
 	article {
 		h2 {
 			margin-bottom: 4px;
@@ -266,6 +269,45 @@ $button-size: 1.5rem;
 	a {
 		color: #1E90FF;
 		text-decoration: underline;
+	}
+	.projects {
+		padding-top: 0px;  
+      	padding-right: 0px;  
+      	padding-bottom: 0.25in;  
+      	padding-left: 0;
+      	.ptitle {
+			font-size: 135%;
+			font-weight: bold;
+		}
+		.authorlist {
+			//font-style: italic;
+			text-color: #444444;
+		}
+		.conferenceinfo {
+			@include font-rem(12);
+			font-style: italic;
+			text-color: #444444;
+		}
+		me {
+			font-weight: bold;
+		}
+		.description {
+			padding-top: 12px;  
+	      	padding-right: 0px;  
+	      	padding-bottom: 0px;  
+	      	padding-left: 0;
+	      	.picture-side {
+	      		img {
+					max-width: 300px;
+	      		}
+	      	}
+	      	.text-side {
+	      		@include font-rem(13);
+	      	}
+		}
+	}
+	#projectslist {
+
 	}
 }
 .image-wrap {
@@ -334,7 +376,7 @@ $button-size: 1.5rem;
 .author-social {
   display: block;
   margin-bottom: 5px;
-  @include font-rem(14);
+  @include font-rem(15);
   color: $black;
   &:visited {
     color: $black;
@@ -364,7 +406,7 @@ $button-size: 1.5rem;
 		p,
 		.author-social {
 			display: block;
-			max-width: 125px;
+			max-width: 135px;
 		}
 		h3 {
 			margin-top: 10px;

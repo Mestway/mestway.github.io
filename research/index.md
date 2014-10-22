@@ -1,6 +1,6 @@
 ---
-layout: home
-title: "About me"
+layout: research
+title: "Research"
 date: 
 modified:
 excerpt:

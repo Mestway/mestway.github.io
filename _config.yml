@@ -1,8 +1,9 @@
 # Site wide configuration
 
-title:            Chenglong (Stanley) Wang
+title:            Chenglong Wang
 locale:           en_US
-url:              http://mestway.github.io
+#url:              http://mestway.github.io
+url:              http://localhost:4000
 
 # Jekyll configuration
 
@@ -26,7 +27,7 @@ kramdown:
 # Site owner
 owner:
   name: Chenglong Wang
-  avatar: Docusta.jpg
+  avatar: me.jpg
   bio: "A senior undergraduate struggling against programming languages."
   email: "stanley.chenglongwang@gmail.com" 
   disqus-shortname: 
