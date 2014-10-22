@@ -34,37 +34,50 @@
     {% include _author-bio.html %}
   </div>
   <div id="index">
-	{% comment %}
-  	<h3><a href="{{ site.url}}/posts/">Recent Posts</a></h3>
-      {% for post in site.posts limit:5 %}    
-      <article>
-        {% if post.link %}
-          <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
-        {% else %}
-          <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-          <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-        {% endif %}
-      </article>
-      {% endfor %}
-	{% endcomment %}
     <div id="about">
-    <h3>About me</h3>
+    <h4>About me</h4>
       <p> 
         I'm Chenglong Wang, a senior undergraduate in the school of EECS, Peking University. 
-        I'm also working as a research assistant in Software Engineering Institute with <a class="my_ref" href="http://sei.pku.edu.cn/~xiongyf04/">Prof. Yingfei Xiong</a> and <a class="my_ref" href="http://research.nii.ac.jp/~hu/">Prof. Zhenjiang Hu</a> in programming language.
+        I'm also working as a research assistant in Software Engineering Institute in programming language.
       </p>
     </div>
     <div id="experiences">
-    
+      <h4>Experiences</h4>
+      <ul>
+        <li>
+          <div class="position">B.S. Candidate (09/2011 - expected 07/2015)</div>
+          <div class="location">School of Electronics Engineering and Computer Science, Peking University</div>
+        </li>
+        <li>
+          <div class="position">Research Assistant (03/2014 - present)</div>
+          <div class="location">Software Engineering Institute, Peking University</div>
+          <div class="advisor"> Advisor: <a href="http://sei.pku.edu.cn/~xiongyf04/">Yingfei Xiong</a>, <a class="my_ref" href="http://research.nii.ac.jp/~hu/">Zhenjiang Hu</a></div>
+        </li>
+        <li>
+          <div class="position">Research Intern (06/2014 - 09/2014)</div>
+          <div class="location">Computer Science Department, Carnegie Mellon University</div>
+          <div class="advisor"> Advisor: <a href="http://www.cs.cmu.edu/~aldrich/index.html">Jonathan Aldrich</a></div>
+        </li>
+      </ul>
     </div>
     <div id="research">
-      <h3>Research</h3>
+      <h4>Research</h4>
       <p>
-        My main interests is in programming language, especially type theory, domain-specific language and program manipulation. Besides, I'm also quite interested in software engineering and visualization.
+        My main interest is in programming language, especially type theory, domain-specific language and program manipulation. Besides, I'm also interested in software engineering and visualization.
       </p>
       <p>
-        I love formal reasoning and prooving things, clear rules and challenging theorems are my favorite. :-)  My research projects are available at <a href="/research/">research page</a>.
+        I love formal reasoning and proving things: clear rules and beautiful theorems are my favorite. :-)  My research projects are available at <a href="/research/">my research page</a>.
       </p>
+    </div>
+    <div id="personal">
+      <h4>Personal</h4>
+       "So long as you retain your spirit of exploration, surely you shall find your way out. This I believe." &nbsp;&nbsp;--- Map system (From the game <a href="http://www.cavestory.org/">Cave Story</a>)
+      <ul>
+        <li>Piano player: "I am a general. My soldiers are the keys and I have to command them."</li>
+        <li>Drama enthusiast: "Dreams and anguish bring us together."</li>
+        <li>Roller coaster lover: More speeeeeeeeeeeeed!!</li>
+        <li>Badminton player: not so good as <a href="http://www.winnieliu.org">Zipeng (my roommate)</a> :-( </li>
+      </ul>
     </div>
   </div><!-- /#index -->
 </div><!-- /#main -->

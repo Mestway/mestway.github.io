@@ -270,6 +270,15 @@ $button-size: 1.5rem;
 		color: #1E90FF;
 		text-decoration: underline;
 	}
+	#experiences {
+		@include font-rem(14);
+		ul {
+			line-height: 150%;
+		}
+	}
+	#personal {
+		@include font-rem(14);
+	}
 	.projects {
 		padding-top: 0px;  
       	padding-right: 0px;  

@@ -3,7 +3,7 @@
 title:            Chenglong Wang
 locale:           en_US
 #url:              http://mestway.github.io
-url:              http://mestway.github.io
+url:              http://localhost:4000
 
 # Jekyll configuration
 
@@ -32,7 +32,7 @@ owner:
   email: "stanley.chenglongwang@gmail.com" 
   disqus-shortname: 
   twitter: #username
-  facebook: Stanley Wang
+  facebook: mestway
   google:
     plus: #stanley.chenglongwang
     analytics: 
