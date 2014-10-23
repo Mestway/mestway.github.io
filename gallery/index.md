@@ -1,12 +1,11 @@
 ---
-layout: home
-title: "About me"
+layout: gallery
+title: "Gallery"
 date: 
 modified:
 excerpt:
 tags: []
 image:
   feature:
-bigtitle: yes
 ---
 

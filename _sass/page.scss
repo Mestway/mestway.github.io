@@ -279,6 +279,9 @@ $button-size: 1.5rem;
 	#personal {
 		@include font-rem(14);
 	}
+	#links {
+		@include font-rem(14);
+	}
 	.projects {
 		padding-top: 0px;  
       	padding-right: 0px;  
@@ -317,6 +320,9 @@ $button-size: 1.5rem;
 	}
 	#projectslist {
 
+	}
+	.gallerycontent {
+		@include font-rem(14);
 	}
 }
 .image-wrap {

@@ -34,15 +34,18 @@
     {% include _author-bio.html %}
   </div>
   <div id="index">
+    {% if page.bigtitle %}
+      <h3>Chenglong (Stanley) Wang</h3>
+    {% endif %}
     <div id="about">
-    <h4>About me</h4>
+    <h2>About me</h2>
       <p> 
-        I'm Chenglong Wang, a senior undergraduate in the school of EECS, Peking University. 
+        I'm Chenglong (Stanley) Wang, a senior undergraduate in the school of EECS, Peking University. 
         I'm also working as a research assistant in Software Engineering Institute in programming language.
       </p>
     </div>
     <div id="experiences">
-      <h4>Experiences</h4>
+      <h2>Experiences</h2>
       <ul>
         <li>
           <div class="position">B.S. Candidate (09/2011 - expected 07/2015)</div>
@@ -59,24 +62,32 @@
           <div class="advisor"> Advisor: <a href="http://www.cs.cmu.edu/~aldrich/index.html">Jonathan Aldrich</a></div>
         </li>
       </ul>
-    </div>
+    </div><!-- experience -->
     <div id="research">
-      <h4>Research</h4>
+      <h2>Research</h2>
       <p>
         My main interest is in programming language, especially type theory, domain-specific language and program manipulation. Besides, I'm also interested in software engineering and visualization.
       </p>
       <p>
         I love formal reasoning and proving things: clear rules and beautiful theorems are my favorite. :-)  My research projects are available at <a href="/research/">my research page</a>.
       </p>
-    </div>
+    </div><!-- research -->
     <div id="personal">
-      <h4>Personal</h4>
+      <h2>Personal</h2>
        "So long as you retain your spirit of exploration, surely you shall find your way out. This I believe." &nbsp;&nbsp;--- Map system (From the game <a href="http://www.cavestory.org/">Cave Story</a>)
       <ul>
         <li>Piano player: "I am a general. My soldiers are the keys and I have to command them."</li>
         <li>Drama enthusiast: "Dreams and anguish bring us together."</li>
         <li>Roller coaster lover: More speeeeeeeeeeeeed!!</li>
         <li>Badminton player: not so good as <a href="http://www.winnieliu.org">Zipeng (my roommate)</a> :-( </li>
+      </ul>
+    </div><!-- personal -->
+    <div id="links">
+      <h2>Links</h2>
+      "I'm just another link in the chain."
+      <ul>
+        <li><a href="http://www.cs.cmu.edu/~comar">Cyrus Omar</a>: A good man, helps me a lot in my research in CMU.</li>
+        <li><a href="http://www.winnieliu.org">Zipeng Liu</a>: My roommate, plays StarCraft II with me.</li>
       </ul>
     </div>
   </div><!-- /#index -->

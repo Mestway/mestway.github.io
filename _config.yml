@@ -2,8 +2,8 @@
 
 title:            Chenglong Wang
 locale:           en_US
-url:              http://mestway.github.io
-#url:              http://localhost:4000
+#url:              http://mestway.github.io
+url:              http://localhost:4000
 
 # Jekyll configuration
 
@@ -41,7 +41,7 @@ owner:
     ad-slot: 
   bing-verify: 
   github: mestway
-  steam: #Flying Globox
+  steam: mestway
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
