@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Data Inspector</title>
+    <link rel="stylesheet" type="text/css" href="tablestyle.css"/>
+  </head>
+  <body>
+    <script type="text/javascript" src="d3.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <div id="main">
+      <h1 align="center"> Answer Data Inspector </h1>
+      <div align="center">
+        <input type="text" id="filterform" class="tftextinput" name="q" size="21" maxlength="120"/>
+        <input type="submit" value="filter" class="tfbutton" id="filter"/>
+        <input type="submit" value="expand" id="expand" />
+      </div>
+    </div>
+    <div>
+          <table style="text-align:left" width="1000px">
+              <td>
+              <div style="font-style:italic; font-weight=bold;">Tips:</div>
+              <ul>
+                <li>
+                  <div class="sp">Filter:</div> Input an regex and click on "filter" button, the displayed results will be answer data that contains such regex pattern. 
+                  (Note that filter will filter the result based on the displayed context, i.e. a second filter operation is filtering the results after first operation rather than the original dataset)
+                </li>
+              <li><div class="sp">Expand:</div> Reset the displayed data, all answer data will be displayed.</li>
+              <li><div class="sp">Search trick 1:</div> To filter by "or" relation, e.g. search data containing either "DFS" or "BFS", regex (DFS | BFS) can be used.</li>
+              <li><div class="sp">Search trick 2:</div> To filter by "and" relation, e.g. search data containing both "DFS" and "BFS", simply filter by "DFS" first and then perform a second filter using "BFS". </li>
+              <li><div class="sp">Some preset search syntax: </div>
+                  DFS: DFS | Depth first search | Depth-first search <br> 
+                  BFS: BFS | breadth first search | breadth-first search <br>
+                  MST: MST | minimum spanning tree <br>
+              </li> 
+            </ul>
+             </td>
+          </table>
+        </div>
+
+    <script src="data.js"></script>
+    <script type="text/javascript">
+      var fistColumnWidth = "50pt";
+
+      // data is define the the other file
+      var table = d3.select("body")
+        .append("table")
+        .attr("width", "800px");
+
+      var tableheader = table.append("tr");
+        tableheader.append("th").attr("width", fistColumnWidth).style("text-align","center").text("ID");
+        tableheader.append("th").text("Annswer Data");
+      
+
+      table.selectAll(".lines")
+        .data(data)
+        .enter()
+        .append("tr")
+        .attr("class", "lines")
+        .append("td")
+        .attr("width", fistColumnWidth)
+        .style("text-align","center")
+        .html(function(d) {
+          return d.id;
+        });
+      d3.selectAll(".lines")
+        .append("td")
+        .style("line-height", "125%")
+        .html(function(d){
+          d.displaystyle = "table-row";
+          return d.data;
+        });
+    
+    $("#filter")
+        .click(function () {
+          console.log("I'm here");
+          filter($("#filterform").val());
+        });
+
+        function filter(s) {
+          var regex = new RegExp(s, "i");
+          d3.selectAll(".lines")
+          .style("display", function(d) {
+            if(regex.test(d.data)) {
+              return d.displaystyle;
+            }
+            else
+              d.displaystyle = "none";
+              return d.displaystyle; 
+          });
+        }
+    
+        $("#expand")
+        .click(function() {
+          d3.selectAll(".lines").style("display", function(d) {
+            d.displaystyle = "table-row";
+            return d.displaystyle;
+          });
+        });
+
+    </script>    
+  </body>
+</html>
