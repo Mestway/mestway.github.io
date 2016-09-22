@@ -7,7 +7,18 @@
 /* Toggle Styles */
 
 body {
-    background-color: #E8E8E8;
+    background-color: #E9E9E9;
+}
+
+.contact-icon {
+    color: #666666;
+}
+
+#content {
+    padding-left: 18%;
+    padding-right: 18%;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 #wrapper {
@@ -133,7 +144,7 @@ body {
 }
 
 #bio-image {
-    max-width: 180px;
+    max-width: 72px;
     border-radius: 50%;
     display: block;
     margin-left: auto;
@@ -216,4 +227,18 @@ p {
 
 #personal ul {
     padding-top: 5px;
+}
+
+#header {
+    position: relative;
+}
+#header-content-right {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+span {
+    padding-top: 20px;
+    display:table;
+    margin:0 auto;
 }
