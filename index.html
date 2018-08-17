@@ -29,11 +29,12 @@
 
 </head>
 
-<body>
+<body id="body-id" mode="serious">
   <div id="content">
     <div id="header">
       <h2>Chenglong Wang</h2>
       <div id="header-content-left-buttom">
+        <!--<a id="normal-mode">Normal</a> <a id="fun-mode">Fun</a>-->
         <a href="mailto:clwang@cs.washington.edu" class="contact-icon"><i class="fa fa-fw fa-envelope-square"></i>Email</a>
         <a href="https://www.facebook.com/chenglongwang93" class="contact-icon"><i class="fa fa-fw fa-facebook-square"></i>Facebook</a>
         <a href="http://github.com/mestway" class="contact-icon"><i class="fa fa-fw fa-github"></i>Github</a>
@@ -46,15 +47,16 @@
 
     <h3 class="content-title">Hi!</h3>
     <div id="about">
-      <p>I’m a third-year computer science PhD student at University of Washington <a href="http://uwplse.org">PLSE</a> group, working with <a href="https://www.cs.washington.edu/people/faculty/bodik">Ras Bodik</a> and <a href="https://homes.cs.washington.edu/~akcheung/">Alvin Cheung</a>. I want to help end-users to solve programming tasks by synthesizing programs for them.</p>
-      <p>A while ago, I studied in Peking University. I was lucky to work with <a href="http://research.nii.ac.jp/~hu/">Zhenjiang Hu</a> and <a href="http://sei.pku.edu.cn/~xiongyf04/">Yingfei Xiong</a> on program transformation.</p> 
+      <p>I’m a 3rd-year computer science PhD student at University of Washington <a href="http://uwplse.org">PLSE</a> group, working with <a href="https://www.cs.washington.edu/people/faculty/bodik">Ras Bodik</a> and <a href="https://homes.cs.washington.edu/~akcheung/">Alvin Cheung</a>. I want to help end-users to solve programming tasks by synthesizing programs for them.</p>
+      <p>Quite a while ago, I studied in Peking University. I was lucky to work with <a href="http://research.nii.ac.jp/~hu/">Zhenjiang Hu</a> and <a href="http://sei.pku.edu.cn/~xiongyf04/">Yingfei Xiong</a> on program transformation.</p> 
     </div>
     <h3 class="content-title">Projects</h3>
     <div id="Research">
-      <p>I'm excited about the following two projects recently:</p>
+      <p>I'm excited about the following projects:</p>
           <ul>
             <li> <a href="https://scythe.cs.washington.edu/">Scythe</a>: Synthesizing SQL queries from input-output examples.</li>
             <li> <a href="http://cosette.cs.washington.edu/">Cosette</a>: Reasoning about SQL qurey equivalence. </li>
+            <li> <a href="https://uwdata.github.io/draco/">Draco</a>: Formalizing Visualization Design Knowledge as Constraints. </li>
           </ul>
     </div>
     <div id="pulications">
@@ -67,11 +69,41 @@
         <ul id="projectslist">
           <li>
             <div class="projects">
+              <div> <b> Speeding up Symbolic Reasoning for Relational Queries</b> (OOPSLA 2018)</div>
+              <div class="authorlist">Chenglong Wang, Alvin Cheung and Ras Bodik.</div>
+              <div><a href="http://cosette.cs.washington.edu/">[project-site]</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="projects">
+              <div> <b> Formalizing Visualization Design Knowledge as Constraints: Actionable and Extensible Models in Draco</b> (InfoVis 2018, Best Paper)</div>
+              <div class="authorlist">Dominik Moritz, Chenglong Wang, Greg L. Nelson, Halden Lin, Adam M. Smith, Bill Howe and Jeffrey Heer.</div>
+              <div><a href="https://www.domoritz.de/papers/2018-Draco-InfoVis.pdf">[paper]</a> <a href="https://uwdata.github.io/draco/">[project-site]</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="projects">
+              <div> <b>Natural Language to Structured Query Generation via Meta-Learning</b> (NAACL 2018) (short paper)</div>
+              <div class="authorlist">Po-Sen Huang, Chenglong Wang, Rishabh Singh, Wen-tau Yih and Xiaodong He.</div>
+              <div><a href="https://arxiv.org/abs/1803.02400">[paper]</a> <a href="https://github.com/Microsoft/PointerSQL">[source]</a></div>
+               <div class="description">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="projects">
+              <div> <b>NL2Bash: A Corpus and Semantic Parser for Natural Language Interface to the Linux Operating System.</b> (LREC 2018) </div>
+              <div class="authorlist">Xi Victoria Lin, Chenglong Wang, Luke Zettlemoyer and Michael D. Ernst.</div>
+              <div><a href="http://victorialin.net/pubs/nl2bash.pdf">[paper]</a> <a href="https://github.com/TellinaTool/nl2bash">[source]</a></div>
+              <div class="description">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="projects">
               <div> <b>Synthesizing Highly Expressive SQL Queries from Input-Output Examples</b> (PLDI 2017)</div>
               <div class="authorlist">Chenglong Wang, Alvin Cheung and Rastislav Bodik.</div>
               <div><a href="https://scythe.cs.washington.edu/media/scythe-pldi.pdf">[paper]</a> <a href="./data/pldi-slides.pdf">[slides:PDF]</a>  <a href="http://scythe.cs.washington.edu/">[project-site]</a></div>
-
-
                <div class="description">
               </div>
             </div>
@@ -100,9 +132,18 @@
             Other
         </h5>
         <ul id="projectslist">
+            <li>
+            <div class="projects">
+              <div> <b>Execution-Guided Neural Program Decoding</b> (NAMPI 2018) </div>
+              <div class="authorlist">Chenglong Wang, Po-Sen Huang, Alex Polozov, Marc Brockschmidt and Rishabh Singh.</div>
+              <div><a href="https://arxiv.org/abs/1807.03100v1">[paper]</a></div>
+              <div class="description">
+              </div>
+            </div>
+          </li>
           <li>
             <div class="projects">
-              <div> <b>Demonstration of the Cosette Automated SQL Prover</b> (SIGMOD Demo 2017, Best Demo Winner!) </div>
+              <div> <b>Demonstration of the Cosette Automated SQL Prover</b> (SIGMOD Demo 2017, Best Demo) </div>
               <div class="authorlist">Shumo Chu, Daniel Li, Chenglong Wang, Alvin Cheung and Dan Suciu.</div>
               <div><a href="http://demo.cosette.cs.washington.edu">[demo]</a> <a href="https://github.com/stechu/stechu.github.io/raw/master/papers/cosette-demo.pdf">[paper]</a></div>
               <div class="description">
@@ -131,7 +172,7 @@
             <div class="projects">
               <div> <b>SWIN: Towards Type-Safe Java Program Adaptation between APIs</b> (PEPM 2015)</div>
               <div class="authorlist">Jun Li, Chenglong Wang, Yingfei Xiong and Zhenjiang Hu.</div>
-              <div><a href="https://github.com/Mestway/SWIN-Project/blob/master/docs/pepm-15/pepm-15.pdf">[paper]</a> <a href="https://github.com/Mestway/SWIN-Project/blob/master/docs/pepm-15/TR/TR.pdf">[tech-report]</a></div>
+              <div><a href="http://sei.pku.edu.cn/~xiongyf04/papers/PEPM15.pdf">[paper]</a> <a href="https://github.com/Mestway/SWIN-Project/blob/master/docs/pepm-15/TR/TR.pdf">[tech-report]</a></div>
               <div class="description">
               </div>
             </div>
@@ -140,17 +181,19 @@
     </div>
     <div id="personal">
       <h3>Fun</h3>
-       "So long as you retain your spirit of exploration, surely you shall find your way out. This I believe." &nbsp;&nbsp;--- Map system 
+       <text style="font-style:italic;">"So long as you retain your spirit of exploration, surely you shall find your way out. This I believe." </text>
+       <br/> &nbsp;&nbsp;--- Map system 
        (From the game <a href="http://www.cavestory.org/">Cave Story</a>)
        <br />
-      <ul>
+       My spirit of exploration drives me into piano, drama, badminton, hiking, and jumping out of planes.
+      <!--<ul>
         <li>Piano: "My soldiers are the keys and I have to command them."</li>
         <li>Drama: "Dreams and anguish bring us together."</li>
         <li>Badminton: It's fun!</li>
-      </ul>
+      </ul>-->
     </div><!-- personal -->
     
-    <span style="text-align:center; font-size: 80%;">© 2016 Chenglong Wang.</span>
+    <span style="text-align:center; font-size: 80%;">© 2018 Chenglong Wang.</span>
     <!-- end of the main list -->
   </div>
       
@@ -166,6 +209,13 @@
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
+    $("#fun-mode").click(function(e) {
+        $("#body-id").css({'font-family' : 'Delicious'});
+    });
+    $("#normal-mode").click(function(e) {
+        $("#body-id").css({'font-family' : '"Lucida Sans Unicode", "Lucida Grande", sans-serif'});
+    });
+    
     </script>
 </body>
 

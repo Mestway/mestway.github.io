@@ -6,10 +6,12 @@
 
 /* Toggle Styles */
 
-body {
-    font-family:  "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+/*@font-face { font-family: Delicious; src: url(../fonts/VCR_OSD_MONO_1.001.ttf); } */
+@font-face { font-family: Delicious; src: url("../fonts/Perfect DOS VGA 437 Win.ttf"); }
 
-    background-color: #F8F8F8;
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background-color: #F7F7F7;
 }
 
 .contact-icon {
@@ -84,7 +86,6 @@ body {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999999;
 }
 
 .sidebar-nav li a:hover {
@@ -105,7 +106,6 @@ body {
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #999999;
 }   
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -174,7 +174,6 @@ body {
 .bio-nav li a {
     display: block;
     text-decoration: none;
-    color: #999999;
 }
 
 .bio-nav li a:hover {
