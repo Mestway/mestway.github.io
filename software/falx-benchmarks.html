@@ -152,8 +152,6 @@ trace_type  :=  bar, line, point, area
         <p>Target visualizations include bar charts, line charts, scatter plots, area charts, stacked bar (area) charts, multi-layered charts, and facted (multi-vew) charts. Target visualizations and visual sketches are rendered using <a href='https://vega.github.io/vega-lite/'>Vega-Lite</a> with the help of <a href="https://github.com/vega/vega-embed">Vega-Embed</a> library. Besides providing rendered visualizations, we also provide visual traces (for both visual sketch and the target visualization) in textual form for reference.</p> 
 
         <p style="font-size: 14px">Note: Our visual representation of the visual sketch uses axis and labels from the full visualization to make the comparison between the visual sketch and the output visualization easy. In the synthesis task, these label/axis information are unknown to the synthesizer -- the synthesizer only gets information from the textual representation of the visualization (as traces).</p>
-
-        <p style="font-size: 14px">Known issue: the visualization for benchmark 008 cannot be correctly rendered by Vega-Embed due to a bug in Vega-Embed library, thus we only present textual representation of the visualizations for this benchmark.</p> 
       </div>
       <div id="benchmark-page">
         <h1 id="benchmark-header"> </h1>
@@ -267,19 +265,31 @@ trace_type  :=  bar, line, point, area
           }
       
           // infer domain of the field
-          var domain = benchmarks[id]["output_data"].map(d => d[channelToField[key]])
+          var smallDomain = benchmarks[id]["sample_trace"].map(d => d["props"][key]);
+          var domain = benchmarks[id]["output_data"].map(d => d[channelToField[key]]);
           if (key == "x" && "x2" in traceVisSpec["encoding"]) {
             domain = domain.concat(benchmarks[id]["output_data"].map(d => d[traceVisSpec["encoding"]["x2"]["field"]]));
+            smallDomain = smallDomain.concat(benchmarks[id]["sample_trace"].map(d => d["props"]["x2"]));
           }
           if (key == "y" && "y2" in traceVisSpec["encoding"]) {
             domain = domain.concat(benchmarks[id]["output_data"].map(d => d[traceVisSpec["encoding"]["y2"]["field"]]));
+            smallDomain = smallDomain.concat(benchmarks[id]["sample_trace"].map(d => d["props"]["x2"]));
           }
 
           const encodingType =  traceVisSpec["encoding"][key]["type"];
 
           if (encodingType == "nominal" || encodingType == "ordinal") {
             domain.sort();
-            traceVisSpec["encoding"][key]["scale"] = {"domain": [...new Set(domain)]}; 
+            if (key == "color") {
+              traceVisSpec["encoding"][key]["scale"] = {"domain": [...new Set(domain)]}; 
+              traceVisSpec["encoding"][key]["legend"] =  {
+                "values": smallDomain
+              }
+            }
+            //traceVisSpec["encoding"][key]["scale"] = {"domain": [...new Set(domain)]}; 
+            // traceVisSpec["encoding"][key]["axis"] =  {
+            //   "labelExpr": "indexof(" + "['" + smallDomain.join("','") + "']" + "," + "datum.label) == -1 ? '' : datum.label"
+            // }
           }
           if (encodingType == "quantitative" && !isStackedChart) {
             const maxVal = Math.max(...domain);
@@ -348,7 +358,13 @@ trace_type  :=  bar, line, point, area
 
             if (encodingType == "nominal" || encodingType == "ordinal") {
               domain.sort();
-              layer["encoding"][key]["scale"] = {"domain": [...new Set(domain)]}; 
+              if (key == "color") {
+                layer["encoding"][key]["scale"] = {"domain": [...new Set(domain)]}; 
+                traceVisSpec["encoding"][key]["legend"] =  {
+                  "values": smallDomain
+                }
+              }
+              //layer["encoding"][key]["scale"] = {"domain": [...new Set(domain)]}; 
             }
             if (encodingType == "quantitative" && !containsStackedChart) {
               const maxVal = Math.max(...domain);
@@ -406,7 +422,7 @@ trace_type  :=  bar, line, point, area
       // visualize full vis
       spec["data"] = {"values": benchmarks[id]["output_data"]};
 
-      //console.log(JSON.stringify(spec));
+      // console.log(JSON.stringify(spec));
 
       $("#full-vis").empty()
       vegaEmbed("#full-vis", spec)
