@@ -17,6 +17,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="css/homepage.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
 
@@ -47,82 +48,155 @@
     <h3 class="content-title">Hello!</h3>
 
     <div id="about">
-      <p>I'm a principal researcher in Microsoft Research. Our team designs new interative agentic tools to help people better work with data.</p>
+      <p>I'm a principal researcher in the Deep Learning Group at Microsoft Research.</p>
+      <ul class="research-themes">
+        <li>I design programming languages for creating visual artifacts (<a href="https://github.com/microsoft/flint-chart">Flint</a>, <a href="https://github.com/PiCCL/">PiCCL</a>).</li>
+        <li>I build agentic tools that help people work with data (<a href="https://github.com/microsoft/data-formulator">Data Formulator</a>).</li>
+        <li>I research agent memory and simulators (<a href="https://github.com/TIMAN-group/PlugMem">PlugMem</a>, <a href="https://github.com/microsoft/StudentSim">StudentSim</a>, <a href="https://arxiv.org/abs/2510.14308">ReUseIt</a>).</li>
+      </ul>
         
-      <p>I got my PhD in University of Washington. I was lucky to work with <a href="https://www.cs.washington.edu/people/faculty/bodik">Ras Bodik</a> and <a href="https://people.eecs.berkeley.edu/~akcheung/">Alvin Cheung</a>, and we built program synthesis-powered tools for data analysis. I studied in Peking University. I was lucky to work with <a href="http://sei.pku.edu.cn/~hu/">Zhenjiang Hu</a> and <a href="http://sei.pku.edu.cn/~xiongyf04/">Yingfei Xiong</a> on program transformation.</p>
+      <p>I got my PhD in University of Washington. I was lucky to work with <a href="https://www.cs.washington.edu/people/faculty/bodik">Ras Bodik</a> and <a href="https://people.eecs.berkeley.edu/~akcheung/">Alvin Cheung</a>. I studied in Peking University and was lucky to work with <a href="http://sei.pku.edu.cn/~hu/">Zhenjiang Hu</a> and <a href="http://sei.pku.edu.cn/~xiongyf04/">Yingfei Xiong</a>.</p>
 
     </div>
     
-    <h3 class="content-title">News</h3>
-    <div id="Research">
-      <p>Check out <strong>Data Formulator</strong>, our open-source AI-powered visulaization tool for data exploration. 
-          <a href="https://data-formulator.ai/">[tool]</a> 
-          <a href="https://github.com/microsoft/data-formulator">[github]</a> 
-          <a href="https://www.youtube.com/watch?v=GfTE2FLyMrs">[video]</a>
-      </p>
-      <p>Drop me an email if you'd like to work together.</p>
+    <h3 class="content-title">Highlights</h3>
+    <div id="Research" class="project-highlights">
+      <article class="project-highlight highlight-flint">
+        <h4><a href="https://microsoft.github.io/flint-chart/"><img class="project-logo" src="images/flint-logo.svg" alt="" width="32" height="32">Flint</a></h4>
+        <p>A visualization language that lets AI agents create expressive charts from compact, human-editable specs.</p>
+        <div class="highlight-links">
+          <a href="https://microsoft.github.io/flint-chart/"><i class="fa fa-external-link" aria-hidden="true"></i> Website</a>
+          <a href="https://github.com/microsoft/flint-chart" data-github-repo="microsoft/flint-chart"><i class="fa fa-github" aria-hidden="true"></i> GitHub <span class="github-star-count" aria-label="4k stars"><i class="fa fa-star" aria-hidden="true"></i> <span>4k</span></span></a>
+        </div>
+      </article>
+      <article class="project-highlight highlight-data-formulator">
+        <h4><a href="https://data-formulator.ai/"><img class="project-logo" src="images/data-formulator-logo.ico" alt="" width="32" height="32">Data Formulator</a></h4>
+        <p>An open-source, AI-powered visualization tool for data exploration.</p>
+        <div class="highlight-links">
+          <a href="https://data-formulator.ai/"><i class="fa fa-external-link" aria-hidden="true"></i> Tool</a>
+          <a href="https://github.com/microsoft/data-formulator" data-github-repo="microsoft/data-formulator"><i class="fa fa-github" aria-hidden="true"></i> GitHub <span class="github-star-count" aria-label="17k stars"><i class="fa fa-star" aria-hidden="true"></i> <span>17k</span></span></a>
+          <a href="https://www.youtube.com/watch?v=GfTE2FLyMrs"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Video</a>
+        </div>
+      </article>
+    </div>
+    <div id="blogs">
+      <h3 class="content-title">Blogs</h3>
+      <ul id="blogslist">
+        <li>
+          <a href="https://www.microsoft.com/en-us/research/blog/flint-a-visualization-language-for-the-ai-era/"><b>Flint: A visualization language for the AI era</b></a>
+          <span class="blog-date">July 2026</span>
+        </li>
+        <li>
+          <a href="https://www.microsoft.com/en-us/research/blog/data-formulator-0-7-ai-powered-data-analytics-for-enterprise-data/"><b>Data Formulator 0.7: AI-powered data analytics for enterprise data</b></a>
+          <span class="blog-date">May 2026</span>
+        </li>
+        <li>
+          <a href="https://www.microsoft.com/en-us/research/blog/from-raw-interaction-to-reusable-knowledge-rethinking-memory-for-ai-agents/"><b>PlugMem: Transforming raw agent interactions into reusable knowledge</b></a>
+          <span class="blog-date">March 2026</span>
+        </li>
+        <li>
+          <a href="https://www.microsoft.com/en-us/research/blog/data-formulator-exploring-how-ai-can-help-analysts-create-rich-data-visualizations/"><b>Data Formulator: Exploring how AI can help analysts create rich data visualizations</b></a>
+          <span class="blog-date">October 2024</span>
+        </li>
+        <li>
+          <a href="https://www.microsoft.com/en-us/research/blog/data-formulator-a-concept-driven-ai-powered-approach-to-data-visualization/"><b>Data Formulator: A concept-driven, AI-powered approach to data visualization</b></a>
+          <span class="blog-date">October 2023</span>
+        </li>
+      </ul>
     </div>
     <div id="pulications">
         <h3 class="content-title">
-            Publications
+        Papers
         </h3>
-        <h5 class="sub-content-title">
-            Conference
-        </h5>
         <ul id="projectslist">
+          <li>
+            <div class="projects">
+              <div><b>StudentSim: Training LLM-based Student Simulators</b> (preprint)</div>
+              <div class="authorlist">Ke Yang, <b>Chenglong Wang</b>, Michel Galley, Chandan Singh, Jeevana Priya Inala, ChengXiang Zhai, Jianfeng Gao</div>
+              <div><a href="https://arxiv.org/abs/2609.01591">[arxiv]</a> <a href="https://github.com/microsoft/StudentSim">[github]</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="projects">
+              <div><b>Chart2SVG: Editable SVG Generation from Raster Chart Images</b> (VIS 2026)</div>
+              <div class="authorlist">Jinning Cui, Lu Chen, Haoyan Shi, Yue He, <b>Chenglong Wang</b>, Mengyu Zhou, Weidong Huang, Yunhai Wang</div>
+              <div><a href="https://arxiv.org/abs/2608.26544">[arxiv]</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="projects">
+              <div><b>Flint: A Semantics-Driven Data Visualization Intermediate Language</b> (VIS 2026)</div>
+              <div class="authorlist">Yunhai Wang, Kecheng Lu, Junhao Chen, Alper Sarikaya, <b>Chenglong Wang</b></div>
+              <div><a href="https://arxiv.org/abs/2607.20775">[arxiv]</a> <a href="https://microsoft.github.io/flint-chart/">[website]</a> <a href="https://github.com/microsoft/flint-chart">[github]</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="projects">
+              <div><b>VGI-Bench: Probing Visual Intelligence in Video Generation Models</b> (EMNLP 2026)</div>
+              <div class="authorlist">Xuan He, Cong Wei, Yuhao Cheng, Linrui Ma, Yuxuan Zhang, Zuojun Li, Yuhao Wen, Jize Jiang, Zeyi Liu, Yuren Hao, Songcheng Cai, Keming Wu, Penghui Du, Kai Zou, Rui Yang, Chenkai Sun, Ke Yang, Ping Nie, Kelsey R Allen, <b>Chenglong Wang</b>, Michel Galley, Jianfeng Gao, ChengXiang Zhai</div>
+              <div><a href="https://arxiv.org/abs/2608.19583">[arxiv]</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="projects">
+              <div><b>MUSE: An Interactive Meta-Agent for Understanding and Steering LLM-powered Data Science Systems</b> (UIST 2026)</div>
+              <div class="authorlist">Wei-Hao Chen, Weixi Tong, Yuan Tian, <b>Chenglong Wang</b>, Tianyi Zhang</div>
+              <div><a href="https://arxiv.org/abs/2608.16181">[arxiv]</a></div>
+            </div>
+          </li>
             <li>
             <div class="projects">
-              <div><b>PlugMem: A Task-Agnostic Plugin Memory Module for LLM Agents</b> (preprint)</div>
-              <div class="authorlist">Ke Yang*, Zixi Chen*, Xuan He*, Jize Jiang*, Michel Galley, Chenglong Wang, Jianfeng Gao, Jiawei Han, ChengXiang Zhai</div>
-              <div><a href="https://arxiv.org/pdf/2603.03296">[arxiv]</a> </div>
+              <div><b>PlugMem: A Task-Agnostic Plugin Memory Module for LLM Agents</b> (ICML 2026)</div>
+              <div class="authorlist">Ke Yang, Zixi Chen, Xuan He, Jize Jiang, Michel Galley, <b>Chenglong Wang</b>, Jianfeng Gao, Jiawei Han, ChengXiang Zhai</div>
+              <div><a href="https://arxiv.org/pdf/2603.03296">[arxiv]</a> <a href="https://github.com/TIMAN-group/PlugMem">[github]</a></div>
             </div>
           </li>
         <li>
             <div class="projects">
               <div><b>ReUseIt: Synthesizing Reusable AI Agent Workflows for Web Automation</b> (IUI 2026)</div>
-              <div class="authorlist">Yimeng Liu, Misha Sra, Jeevana Priya Inala, Chenglong Wang</div>
+              <div class="authorlist">Yimeng Liu, Misha Sra, Jeevana Priya Inala, <b>Chenglong Wang</b></div>
               <div><a href="https://arxiv.org/pdf/2510.14308">[arxiv]</a> </div>
             </div>
           </li>
           <li>
             <div class="projects">
               <div><b>PiCCL: Data-Driven Composition of Bespoke Pictorial Charts</b> (VIS 2025)</div>
-              <div class="authorlist">Haoyan Shi, Yunhai Wang, Junhao Chen, Chenglong Wang, Bongshin Lee</div>
-              <div><a href="https://www.yunhaiwang.net/vis2025/PiCCL/index.html">[link]</a> </div>
+              <div class="authorlist">Haoyan Shi, Yunhai Wang, Junhao Chen, <b>Chenglong Wang</b>, Bongshin Lee</div>
+              <div><a href="https://www.yunhaiwang.net/vis2025/PiCCL/index.html">[website]</a> <a href="https://github.com/PiCCL/">[github]</a></div>
             </div>
           </li>
           <li>
             <div class="projects">
               <div><b>Data Formulator 2: Iterative Creation of Data Visualizations, with AI Transforming Data Along the Way</b> (CHI 2025)</div>
-              <div class="authorlist">Chenglong Wang, Bongshin Lee, Steven Drucker, Dan Marshall, Jianfeng Gao</div>
-              <div><a href="https://arxiv.org/abs/2408.16119">[paper]</a> </div>
+              <div class="authorlist"><b>Chenglong Wang</b>, Bongshin Lee, Steven Drucker, Dan Marshall, Jianfeng Gao</div>
+              <div><a href="https://arxiv.org/abs/2408.16119">[paper]</a> <a href="https://data-formulator.ai/">[tool]</a> <a href="https://github.com/microsoft/data-formulator">[github]</a></div>
             </div>
           </li>
           <li>
             <div class="projects">
-              <div><i class="fa fa-trophy" aria-hidden="true"></i> <b>DynaVis: Dynamically Synthesized UI Widgets for Visualization Editing</b> (CHI 2024, Best Paper Award)</div>
-              <div class="authorlist">Priyan Vaithilingam, Elena L. Glassman, Jeevana Priya Inala, Chenglong Wang</div>
+              <div><i class="fa fa-star paper-award-star" aria-hidden="true"></i> <b>DynaVis: Dynamically Synthesized UI Widgets for Visualization Editing</b> (CHI 2024, <span class="paper-award-label">Best Paper Award</span>)</div>
+              <div class="authorlist">Priyan Vaithilingam, Elena L. Glassman, Jeevana Priya Inala, <b>Chenglong Wang</b></div>
               <div><a href="https://arxiv.org/abs/2401.10880">[paper]</a> </div>
             </div>
           </li>
             <li>
             <div class="projects">
               <div><b>How Do Analysts Understand and Verify AI-Assisted Data Analyses?</b> (CHI 2024)</div>
-              <div class="authorlist">Ken Gu , Ruoxi Shang, Tim Althoff, Chenglong Wang, and Steven M. Drucker</div>
+              <div class="authorlist">Ken Gu, Ruoxi Shang, Tim Althoff, <b>Chenglong Wang</b>, Steven M. Drucker</div>
               <div><a href="https://arxiv.org/abs/2309.10947">[paper]</a> </div>
             </div>
           </li>
             <li>
             <div class="projects">
               <div><b>PhotoScout: Synthesis-Powered Multi-Modal Image Search</b> (CHI 2024)</div>
-              <div class="authorlist">Celeste Barnaby, Jocelyn Chen, Chenglong Wang, Isil Dillig</div>
+              <div class="authorlist">Celeste Barnaby, Qiaochu Chen, <b>Chenglong Wang</b>, Isil Dillig</div>
               <div><a href="https://arxiv.org/abs/2401.10464">[paper]</a> </div>
             </div>
           </li>
             <li>
             <div class="projects">
               <div><b>Is Self-Repair a Silver Bullet for Code Generation?</b> (ICLR 2024)</div>
-              <div class="authorlist">Theo X. Olausson, Jeevana Priya Inala, Chenglong Wang, Jianfeng Gao, Armando Solar-Lezama</div>
+              <div class="authorlist">Theo X. Olausson, Jeevana Priya Inala, <b>Chenglong Wang</b>, Jianfeng Gao, Armando Solar-Lezama</div>
               <div><a href="https://arxiv.org/abs/2306.09896">[paper]</a> </div>
             </div>
           </li>
@@ -130,23 +204,23 @@
             <div class="projects">
               <div><b>
 Data Formulator: AI-powered Concept-driven Visualization Authoring
-</b> (VIS 2023, Honorable Mention)</div>
-              <div class="authorlist">Chenglong Wang, John Thompson, Bongshin Lee</div>
-              <div><a href="https://arxiv.org/abs/2309.10094">[paper]</a> <a href="https://www.microsoft.com/en-us/research/publication/data-formulator-ai-powered-concept-driven-visualization-authoring/">[overview-video]</a> <a href="https://www.microsoft.com/en-us/research/blog/data-formulator-a-concept-driven-ai-powered-approach-to-data-visualization/">[blog]</a></div>
+</b> (VIS 2023, <span class="paper-award-label">Honorable Mention</span>)</div>
+              <div class="authorlist"><b>Chenglong Wang</b>, John Thompson, Bongshin Lee</div>
+              <div><a href="https://arxiv.org/abs/2309.10094">[paper]</a> <a href="https://data-formulator.ai/">[tool]</a> <a href="https://github.com/microsoft/data-formulator">[github]</a> <a href="https://www.microsoft.com/en-us/research/publication/data-formulator-ai-powered-concept-driven-visualization-authoring/">[overview-video]</a> <a href="https://www.microsoft.com/en-us/research/blog/data-formulator-a-concept-driven-ai-powered-approach-to-data-visualization/">[blog]</a></div>
             </div>
           </li>
             <li>
             <div class="projects">
               <div><b>
 Fast and Reliable Program Synthesis via User Interaction</b> (ASE 2023)</div>
-              <div class="authorlist">Yanju Chen, Chenglong Wang, Xinyu Wang, Osbert Bastani, Yu Feng</div>
+              <div class="authorlist">Yanju Chen, <b>Chenglong Wang</b>, Xinyu Wang, Osbert Bastani, Yu Feng</div>
             </div>
           </li>
            <li>
             <div class="projects">
               <div><b>
 On the Design of AI-powered Code Assistants for Notebooks</b> (CHI 2023)</div>
-              <div class="authorlist">Andrew McNutt, Chenglong Wang, Rob DeLine, Steven M. Drucker</div>
+              <div class="authorlist">Andrew M. McNutt, <b>Chenglong Wang</b>, Robert A. DeLine, Steven M. Drucker</div>
               <div><a href="https://arxiv.org/abs/2301.11178">[paper]</a></div>
             </div>
           </li>
@@ -154,91 +228,91 @@ On the Design of AI-powered Code Assistants for Notebooks</b> (CHI 2023)</div>
             <div class="projects">
               <div><b>Learning Math Reasoning from Self-Sampled Correct and Partially-Correct Solutions
 </b> (ICLR 2023)</div>
-              <div class="authorlist">Ansong Ni, Jeevana Priya Inala, Chenglong Wang, Oleksandr Polozov, Christopher Meek, Dragomir Radev, Jianfeng Gao</div>
+              <div class="authorlist">Ansong Ni, Jeevana Priya Inala, <b>Chenglong Wang</b>, Oleksandr Polozov, Christopher Meek, Dragomir Radev, Jianfeng Gao</div>
               <div><a href="https://arxiv.org/abs/2205.14318">[paper]</a></div>  
             </div>
           </li>
           <li>
             <div class="projects">
               <div><b>Fault-Aware Neural Code Rankers</b> (NeurIPS 2022)</div>
-              <div class="authorlist">Jeevana Priya Inala, Chenglong Wang, Mei Yang, Andres Codas, Mark Encarnación, Shuvendu Lahiri, Madan Musuvathi, Jianfeng Gao</div>
+              <div class="authorlist">Jeevana Priya Inala, <b>Chenglong Wang</b>, Mei Yang, Andres Codas, Mark Encarnación, Shuvendu K Lahiri, Madanlal Musuvathi, Jianfeng Gao</div>
               <div><a href="https://arxiv.org/abs/2206.03865">[paper]</a></div>
             </div>
           </li>
           <li>
             <div class="projects">
               <div><b>Type-Directed Synthesis of Visualizations from Natural Language Queries</b> (OOPSLA 2022)</div>
-              <div class="authorlist">Jocelyn Chen, Shankara Pailoor, Celeste Barnaby, Abby Criswell, Chenglong Wang, Greg Durrett, Isil Dillig</div>
+              <div class="authorlist">Jocelyn Chen, Shankara Pailoor, Celeste Barnaby, Abby Criswell, <b>Chenglong Wang</b>, Greg Durrett, Isil Dillig</div>
               <div><a href="https://www.cs.utexas.edu/~isil/graphy.pdf">[paper]</a></div>
             </div>
           </li>
           <li>
             <div class="projects">
-              <div> <i class="fa fa-trophy" aria-hidden="true"></i> <b>Synthesizing Analytical SQL Queries from Computation Demonstration</b> (PLDI 2022, Distinguished Paper)</div>
-              <div class="authorlist">Xiangyu Zhou, Rastislav Bodik, Alvin Cheung, Chenglong Wang</div>
+              <div> <i class="fa fa-star paper-award-star" aria-hidden="true"></i> <b>Synthesizing Analytical SQL Queries from Computation Demonstration</b> (PLDI 2022, <span class="paper-award-label">Distinguished Paper</span>)</div>
+              <div class="authorlist">Xiangyu Zhou, Rastislav Bodik, Alvin Cheung, <b>Chenglong Wang</b></div>
               <div><a href="https://arxiv.org/abs/2204.07102">[paper]</a> <a href="./data/PLDI-2022-analytical-SQL-synth.pdf">[slides:pdf]</a></div>
             </div>
           </li>
           <li>
             <div class="projects">
-              <div> <i class="fa fa-trophy" aria-hidden="true"></i> <b>Falx: Synthesis-powered Visualization Authoring</b> (CHI 2021, <x style="color: orangered">Best Paper Award</x>)</div>
-              <div class="authorlist">Chenglong Wang, Yu Feng, Rastislav Bodik, Isil Dillig, Alvin Cheung, Amy J. Ko</ ddiv>
+              <div> <i class="fa fa-star paper-award-star" aria-hidden="true"></i> <b>Falx: Synthesis-Powered Visualization Authoring</b> (CHI 2021, <span class="paper-award-label">Best Paper Award</span>)</div>
+              <div class="authorlist"><b>Chenglong Wang</b>, Yu Feng, Rastislav Bodik, Isil Dillig, Alvin Cheung, Amy J. Ko</div>
               <div><a href="https://arxiv.org/abs/2102.01024">[paper]</a> <a href="https://www.youtube.com/watch?v=3b5Y0x-OLU8&ab_channel=ACMSIGCHI">[preview video]</a>  <a href="https://www.youtube.com/watch?v=zpGbDewoqRQ&t=221s&ab_channel=ACMSIGCHI">[CHI talk video]</a> <a href="https://chenglong-wang.medium.com/falx-visualization-by-example-931b4f905f28">[blog post]</a> </div>
             </div>
           </li>
           <li>
             <div class="projects">
               <div> <b>Program Synthesis using Deduction-Guided Reinforcement Learning</b> (CAV 2020)</div>
-              <div class="authorlist">Yanju Chen, Chenglong Wang, Osbert Bastani, Isil Dillig, Yu Feng</div>
+              <div class="authorlist">Yanju Chen, <b>Chenglong Wang</b>, Osbert Bastani, Isil Dillig, Yu Feng</div>
               <div><a href="https://www.cs.utexas.edu/~isil/concord.pdf">[paper]</a></div>
             </div>
           </li>
           <li>
             <div class="projects">
               <div> <b>Scout: Rapid Exploration of Interface Layout Alternatives through High-Level Design Constraints</b> (CHI 2020)</div>
-              <div class="authorlist">Amanda Swearngin, Chenglong Wang, Alannah Oleson, James Fogarty, Amy J. Ko.</div>
+              <div class="authorlist">Amanda Swearngin, <b>Chenglong Wang</b>, Alannah Oleson, James Fogarty, Amy J. Ko.</div>
               <div><a href="./data/Swearngin_Scout_CHI_2020_v19.pdf">[paper]</a></div>
             </div>
           </li>
           <li>
             <div class="projects">
               <div> <b> Visualization by Example </b> (POPL 2020)</div>
-              <div class="authorlist">Chenglong Wang, Yu Feng, Ras Bodik, Alvin Cheung, Isil Dillig.</div>
+              <div class="authorlist"><b>Chenglong Wang</b>, Yu Feng, Ras Bodik, Alvin Cheung, Isil Dillig.</div>
               <div><a href="https://arxiv.org/abs/1911.09668">[paper]</a> <a href="data/popl-2020-slides.pdf">[slides:pdf]</a></div>
             </div>
           </li>
           <li>
             <div class="projects">
               <div> <b> Learning Transferable Graph Exploration </b> (NeurIPS 2019)</div>
-              <div class="authorlist">Hanjun Dai, Yujia Li, Chenglong Wang, Rishabh Singh, Po-Sen Huang, Pushmeet Kohli.</div>
+              <div class="authorlist">Hanjun Dai, Yujia Li, <b>Chenglong Wang</b>, Rishabh Singh, Po-Sen Huang, Pushmeet Kohli.</div>
               <div><a href="https://arxiv.org/abs/1910.12980">[paper]</a></div>
             </div>
           </li>
           <li>
             <div class="projects">
-              <div> <b> Knowing When to Stop: Evaluation and Verification of Conformity to Output-size Specs </b> (CVPR 2019)</div>
-              <div class="authorlist">Chenglong Wang, Rudy Bunel, Krishnamurthy Dvijotham, Po-Sen Huang, Edward Grefenstette, Pushmeet Kohli.</div>
+              <div> <b> Knowing When to Stop: Evaluation and Verification of Conformity to Output-size Specifications </b> (CVPR 2019)</div>
+              <div class="authorlist"><b>Chenglong Wang</b>, Rudy Bunel, Krishnamurthy Dvijotham, Po-Sen Huang, Edward Grefenstette, Pushmeet Kohli.</div>
               <div><a href="https://arxiv.org/abs/1904.12004">[paper]</a> <a href="data/cvpr-poster.pdf">[poster:pdf]</a></div>
             </div>
           </li>
           <li>
             <div class="projects">
               <div> <b> Speeding up Symbolic Reasoning for Relational Queries</b> (OOPSLA 2018)</div>
-              <div class="authorlist">Chenglong Wang, Alvin Cheung, Ras Bodik.</div>
+              <div class="authorlist"><b>Chenglong Wang</b>, Alvin Cheung, Ras Bodik.</div>
               <div><a href="./data/oopsla18.pdf">[paper]</a> <a href="./data/oopsla18-slides.pdf">[slides:pdf]</a> <a href="http://cosette.cs.washington.edu/">[project-site]</a></div>
             </div>
           </li>
           <li>
             <div class="projects">
-              <div> <i class="fa fa-trophy" aria-hidden="true"></i><b> Formalizing Visualization Design Knowledge as Constraints: Actionable and Extensible Models in Draco</b> (InfoVis 2018, <x style="color: orangered">Best Paper</x>)</div>
-              <div class="authorlist">Dominik Moritz, Chenglong Wang, Greg L. Nelson, Halden Lin, Adam M. Smith, Bill Howe, Jeffrey Heer.</div>
+              <div> <i class="fa fa-star paper-award-star" aria-hidden="true"></i><b> Formalizing Visualization Design Knowledge as Constraints: Actionable and Extensible Models in Draco</b> (InfoVis 2018, <span class="paper-award-label">Best Paper</span>)</div>
+              <div class="authorlist">Dominik Moritz, <b>Chenglong Wang</b>, Greg L. Nelson, Halden Lin, Adam M. Smith, Bill Howe, Jeffrey Heer.</div>
               <div><a href="https://www.domoritz.de/papers/2018-Draco-InfoVis.pdf">[paper]</a> <a href="https://uwdata.github.io/draco/">[project-site]</a></div>
             </div>
           </li>
           <li>
             <div class="projects">
               <div> <b>Natural Language to Structured Query Generation via Meta-Learning</b> (NAACL 2018) (short paper)</div>
-              <div class="authorlist">Po-Sen Huang, Chenglong Wang, Rishabh Singh, Wen-tau Yih, Xiaodong He.</div>
+              <div class="authorlist">Po-Sen Huang, <b>Chenglong Wang</b>, Rishabh Singh, Wen-tau Yih, Xiaodong He.</div>
               <div><a href="https://arxiv.org/abs/1803.02400">[paper]</a> <a href="https://github.com/Microsoft/PointerSQL">[source]</a></div>
                <div class="description">
               </div>
@@ -247,7 +321,7 @@ On the Design of AI-powered Code Assistants for Notebooks</b> (CHI 2023)</div>
           <li>
             <div class="projects">
               <div> <b>NL2Bash: A Corpus and Semantic Parser for Natural Language Interface to the Linux Operating System.</b> (LREC 2018) </div>
-              <div class="authorlist">Xi Victoria Lin, Chenglong Wang, Luke Zettlemoyer, Michael D. Ernst.</div>
+              <div class="authorlist">Xi Victoria Lin, <b>Chenglong Wang</b>, Luke Zettlemoyer, Michael D. Ernst.</div>
               <div><a href="http://victorialin.net/pubs/nl2bash.pdf">[paper]</a> <a href="https://github.com/TellinaTool/nl2bash">[source]</a></div>
               <div class="description">
               </div>
@@ -256,7 +330,7 @@ On the Design of AI-powered Code Assistants for Notebooks</b> (CHI 2023)</div>
           <li>
             <div class="projects">
               <div> <b>Synthesizing Highly Expressive SQL Queries from Input-Output Examples</b> (PLDI 2017)</div>
-              <div class="authorlist">Chenglong Wang, Alvin Cheung, Rastislav Bodik.</div>
+              <div class="authorlist"><b>Chenglong Wang</b>, Alvin Cheung, Rastislav Bodik.</div>
               <div><a href="https://scythe.cs.washington.edu/media/scythe-pldi.pdf">[paper]</a> <a href="./data/pldi-slides.pdf">[slides:pdf]</a>  <a href="http://scythe.cs.washington.edu/">[project-site]</a></div>
                <div class="description">
               </div>
@@ -265,7 +339,7 @@ On the Design of AI-powered Code Assistants for Notebooks</b> (CHI 2023)</div>
           <li>
             <div class="projects">
               <div> <b>Cosette: An Automated SQL Solver</b> (CIDR 2017)</div>
-              <div class="authorlist">Shumo Chu, Chenglong Wang, Konstantin Weitz, Alvin Cheung.</div>
+              <div class="authorlist">Shumo Chu, <b>Chenglong Wang</b>, Konstantin Weitz, Alvin Cheung.</div>
               <div><a href="http://cidrdb.org/cidr2017/papers/p51-chu-cidr17.pdf">[paper]</a> <a href="http://cosette.cs.washington.edu/">[project-site]</a> </div>
                <div class="description">
               </div>
@@ -274,7 +348,7 @@ On the Design of AI-powered Code Assistants for Notebooks</b> (CHI 2023)</div>
           <li>
             <div class="projects">
               <div> <b>Transforming Programs between APIs with Many-to-Many Mappings</b> (ECOOP 2016)</div>
-              <div class="authorlist">Chenglong Wang, Jiajun Jiang, Jun Li, Yingfei Xiong, Xiangyu Luo, Lu Zhang, Zhenjiang Hu.</div>
+              <div class="authorlist"><b>Chenglong Wang</b>, Jiajun Jiang, Jun Li, Yingfei Xiong, Xiangyu Luo, Lu Zhang, Zhenjiang Hu.</div>
               <div><a href="https://github.com/Mestway/Patl4J/blob/master/paper/patl-full.pdf">[paper] <a href="https://github.com/Mestway/Patl4J/blob/master/ecoop16-presentation.pdf">[slides:pdf]</a></a>
               </div>
                <div class="description">
@@ -282,6 +356,7 @@ On the Design of AI-powered Code Assistants for Notebooks</b> (CHI 2023)</div>
             </div>
           </li>
         </ul>
+        <div hidden>
         <h5 class="sub-content-title">
             Random
         </h5>
@@ -302,7 +377,7 @@ On the Design of AI-powered Code Assistants for Notebooks</b> (CHI 2023)</div>
           </li>
           <li>
             <div class="projects">
-              <div><i class="fa fa-trophy" aria-hidden="true"></i> <b>Demonstration of the Cosette Automated SQL Prover</b> (SIGMOD Demo 2017, <x style="color: orangered">Best Demo</x>) </div>
+              <div><i class="fa fa-star paper-award-star" aria-hidden="true"></i> <b>Demonstration of the Cosette Automated SQL Prover</b> (SIGMOD Demo 2017, <span class="paper-award-label">Best Demo</span>) </div>
               <div class="authorlist">Shumo Chu, Daniel Li, Chenglong Wang, Alvin Cheung, Dan Suciu.</div>
               <div><a href="http://demo.cosette.cs.washington.edu">[demo]</a> <a href="https://homes.cs.washington.edu/~suciu/cosette-demo.pdf">[paper]</a></div>
               <div class="description">
@@ -337,12 +412,10 @@ On the Design of AI-powered Code Assistants for Notebooks</b> (CHI 2023)</div>
             </div>
           </li>
         </ul>
+        </div>
     </div>
     <div id="personal">
-      <h3>Fun</h3>
        <text style="font-style:italic;">"So long as you retain your spirit of exploration, surely you shall find your way out. This I believe." &nbsp;&nbsp;--- Map system </text>
-       <br/>
-       <p>I enjoy playing piano, climbing and skydiving.</p>
     </div><!-- personal -->
     
     <span id="fun" style="text-align:center; font-size: 80%;">© Chenglong Wang.</span>
@@ -366,6 +439,24 @@ On the Design of AI-powered Code Assistants for Notebooks</b> (CHI 2023)</div>
     });
     $("#normal-mode").click(function(e) {
         $("#body-id").css({'font-family' : '"Lucida Sans Unicode", "Lucida Grande", sans-serif'});
+    });
+
+    document.querySelectorAll("[data-github-repo]").forEach(function(link) {
+      fetch("https://api.github.com/repos/" + link.dataset.githubRepo)
+        .then(function(response) {
+          if (!response.ok) throw new Error("GitHub request failed");
+          return response.json();
+        })
+        .then(function(repository) {
+          var count = new Intl.NumberFormat("en", {
+            notation: "compact",
+            maximumFractionDigits: 0
+          }).format(repository.stargazers_count).toLowerCase();
+          var starCount = link.querySelector(".github-star-count");
+          starCount.querySelector("span").textContent = count;
+          starCount.setAttribute("aria-label", count + " stars");
+        })
+        .catch(function() {});
     });
     
     </script>

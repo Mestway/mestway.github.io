@@ -10,8 +10,15 @@
 @font-face { font-family: Delicious; src: url("../fonts/Perfect DOS VGA 437 Win.ttf"); }
 
 body {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    background-color: #FFFFFF;
+    --ink: #1f2328;
+    --muted-ink: #596168;
+    --rule: #dfe2e5;
+    font-family: "Inter", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+    letter-spacing: 0;
+    color: var(--ink);
+    background-color: #fff;
 }
 
 .contact-icon {
@@ -19,10 +26,9 @@ body {
 }
 
 #content {
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 18px 32px 24px;
 }
 
 #wrapper {
@@ -189,11 +195,207 @@ body {
 }
 
 .content-title {
-    font-style: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+#about,
+#Research,
+#blogslist,
+#projectslist,
+#personal {
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 p {
     font-size: 11pt;
+}
+
+.research-themes {
+    list-style: none;
+    margin: 8px 0 10px;
+    padding-left: 0;
+    font-size: 11pt;
+    line-height: 1.4;
+}
+
+.research-themes li {
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 4px;
+}
+
+.research-themes li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #8c939a;
+}
+
+.project-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin: 10px 0 16px;
+    padding: 14px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    background-image: linear-gradient(#1f232805 1px, transparent 1px), linear-gradient(90deg, #1f232805 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.project-highlight {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0 20px 0 0;
+}
+
+.project-highlight + .project-highlight {
+    border-left: 1px solid var(--rule);
+    padding: 0 0 0 20px;
+}
+
+.project-highlight h4 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.project-highlight h4 a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink);
+}
+
+.project-logo {
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.project-highlight p {
+    color: var(--muted-ink);
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+.highlight-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+    margin-top: auto;
+}
+
+.highlight-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 24px;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.highlight-links a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+.github-star-count {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 3px;
+    color: var(--muted-ink);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.paper-award-star,
+.paper-award-label {
+    color: #b7791f;
+}
+
+.paper-award-star {
+    margin-right: 3px;
+}
+
+@media (max-width: 767px) {
+    #content {
+        padding: 12px 20px 24px;
+    }
+
+    .project-highlights {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .project-highlight {
+        padding: 0;
+    }
+
+    .project-highlight + .project-highlight {
+        border-left: 0;
+        border-top: 1px solid var(--rule);
+        padding: 12px 0 0;
+    }
+
+    #header h2 {
+        padding-right: 78px;
+        font-size: 26px;
+    }
+
+    #header-content-right {
+        right: 0;
+    }
+}
+
+#blogslist,
+#projectslist {
+    list-style: none;
+    margin: 0 16px;
+    padding-left: 0;
+}
+
+#blogslist > li,
+#projectslist > li {
+    position: relative;
+    padding-left: 14px;
+}
+
+#blogslist > li::before,
+#projectslist > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #8c939a;
+}
+
+#blogslist > li {
+    margin-bottom: 8px;
+}
+
+.blog-date {
+    margin-left: 6px;
+    color: var(--muted-ink);
 }
 
 .projects {
@@ -239,7 +441,7 @@ p {
     right: 10px;
 }
 
-span {
+#fun {
     padding-top: 20px;
     display:table;
     margin:0 auto;
